@@ -1,0 +1,37 @@
+%d-flex {
+    display: flex;
+}
+
+@function f-size($size) {
+    @return map-get($font-size, $size);
+}
+
+@function weight($w-name) {
+    @return map-get($font-weight, $w-name)
+}
+
+;
+
+@function txt-color($color) {
+    @if (lightness($color) > 40%) {
+        @return #000;
+    }@else {
+        @return #fff;
+    }
+}
+
+@mixin btn {
+    border-radius: 0.6rem;
+    border: none;
+}
+
+@mixin media-sm {
+    @media screen and (max-width: 576px) {
+        @content;
+    } 
+}
+@mixin media-md {
+    @media only screen and (min-width: 700px) {
+        @content;
+    } 
+}

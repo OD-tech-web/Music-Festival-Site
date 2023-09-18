@@ -1,0 +1,238 @@
+.nav .container, .nav .container .navbar {
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  width: 100%;
+  height: 4.5rem;
+  background-color: #92b4f2;
+  position: fixed;
+  z-index: 5;
+}
+
+.nav .container {
+  color: #000;
+  justify-content: space-around;
+  background-color: violet;
+  height: 4.5rem;
+}
+
+.nav .container .logo {
+  padding: 0 0.6rem;
+  margin: auto 0;
+  position: relative;
+}
+
+.nav .container .logo-txt {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.nav .container .logo-txt div {
+  margin-left: 1rem;
+}
+
+.nav .container .logo-txt-a {
+  width: fit-content;
+  position: absolute;
+  top: -0.9rem;
+  left: 0.1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.nav .container .logo-txt-li {
+  width: fit-content;
+  background-color: #000;
+  font-size: 0.4rem;
+  color: #92b4f2;
+  padding: 0.1% 0.2%;
+  position: absolute;
+  bottom: -0.2rem;
+  right: 0.65rem;
+}
+
+.nav .container .navbar {
+  gap: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin: auto 0;
+}
+
+.nav .container .navbar :first-child {
+  color: #4d004d;
+}
+
+#nill {
+  height: 4.5rem;
+  display: none;
+}
+
+.list {
+  background-color: #131313;
+  color: white;
+  position: absolute;
+  top: -11.1em;
+  width: 100%;
+  z-index: 4;
+  transition: 300ms;
+}
+
+.list li {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.list li:hover {
+  background-color: #838383;
+}
+
+.wrapper {
+  background-image: url("../image/img2.jpeg");
+  background-size: cover;
+  height: 100%;
+}
+
+.wrapper-box {
+  background: linear-gradient(transparent, transparent, transparent, transparent, #92b4f2);
+  height: 100%;
+}
+
+.wrapper-box .my-box {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.wrapper-box .my-box .box {
+  text-align: center;
+  color: white;
+}
+
+.wrapper-box .my-box .box-1 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.wrapper-box .my-box .box-2 {
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+.wrapper-box .my-box .box-3 {
+  margin-top: 1rem;
+}
+
+.wrapper-box .my-box .box-3-input {
+  width: 40%;
+  padding: 1.1rem 1rem;
+  border-radius: 0.6rem;
+  border: none;
+  outline-style: none;
+}
+
+.wrapper-box .my-box .box-3-btn {
+  padding: 1.1rem 2.5rem;
+  border-radius: 0.6rem;
+  border: none;
+  background-color: #92b4f2;
+}
+
+.menu-btn {
+  width: 3rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid white;
+  flex-wrap: wrap;
+  position: absolute;
+  display: none;
+  z-index: 10;
+}
+
+.overlay {
+  width: 100%;
+  background-color: rgba(19, 19, 19, 0.7);
+  position: absolute;
+  top: 0;
+  transition: 300ms;
+}
+
+@media screen and (max-width: 576px) {
+  .nav .container {
+    justify-content: center;
+    align-items: center;
+  }
+  .nav .container .navbar {
+    display: none;
+  }
+  #nill {
+    display: block;
+  }
+  .wrapper-box .my-box .box-1 {
+    padding: 0 0.5rem;
+  }
+  .wrapper-box .my-box .box-3 {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .wrapper-box .my-box .box-3-btn {
+    margin-top: 1rem;
+  }
+  .menu-btn {
+    display: inline-block;
+    top: 1rem;
+    right: 2rem;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .menu-btn-burger1 {
+    background-color: white;
+    width: 85%;
+    height: 0.3rem;
+  }
+  .menu-btn-burger2 {
+    background-color: white;
+    width: 85%;
+    height: 0.3rem;
+  }
+  .menu-btn-burger3 {
+    background-color: white;
+    width: 85%;
+    height: 0.3rem;
+  }
+  .show_hideOverlay {
+    height: 100vh;
+    bottom: 0;
+  }
+  .show_hide {
+    top: 4.5em;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .wrapper-box .my-box .box-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .wrapper-box .my-box .box-3-input {
+    width: 20rem !important;
+  }
+  .wrapper-box .my-box .box-3-btn {
+    margin: auto auto;
+  }
+}
